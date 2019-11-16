@@ -23,5 +23,7 @@ def Materiais():
 def Assunto():
     return render_template('assunto/assunto.html')
 
+    
+
 if (__name__ =='__main__'):
     app.run(debug=True)
