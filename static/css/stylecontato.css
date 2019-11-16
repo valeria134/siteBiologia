@@ -1,0 +1,32 @@
+
+    body { 
+		background-attachment:fixed;
+		background-size:100%;
+		background-repeat:no-repeat;
+		background-image: url("Background.jpg");
+	}
+	#Contato {
+		background-image: url("BackgroundContato.jpg");
+		height: 327px;
+		 width: 100%;
+		background-repeat:no-repeat;
+		background-attachment:fixed;
+	}
+	
+	#titulo {
+		text-align:center;
+		font-family:helvetica;
+	}
+	
+	#forum{
+		background-color:; 
+		border-radius:px;
+		padding:15px;
+		font-size:15px;
+		margin:0 auto; 
+		width:450px;
+	}
+	input,textarea{
+		padding:10px;
+		width:270px;	
+	} 
