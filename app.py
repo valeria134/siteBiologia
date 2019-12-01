@@ -1,29 +1,25 @@
-from flask import Flask, render_template, url_for,flash,redirect
-
-
+from flask import Flask, render_template
+from formulario import CadastroForm
 
  
 app = Flask (__name__)
+app.config['SECRET_KEY'] = 'dkshvfdikhgolfhvljh'
 @app.route('/')
-def index():
-    return render_template('home/home.html')
-@app.route('/cadastro')
+def home():
+    return render_template('home.html')
+
+@app.route('/cadastro', methods=["GET", "POST"])
 def Cadastro():
-    return render_template('cadastro/cadastro.html')
-@app.route('/contato')
-def Contato():
-    return render_template('contato/contato.html')
+    formulario=CadastroForm()
+    return render_template(
+        'cadastro.html',
+        formulario=formulario
+        )
+
+
 @app.route('/login')
 def Login():
-    return render_template('login/login.html')
-@app.route('/materiais')
-def Materiais():
-    return render_template('materiais/materiais.html')
-@app.route('/assunto')
-def Assunto():
-    return render_template('assunto/assunto.html')
-
-    
+    return render_template('login.html')    
 
 if (__name__ =='__main__'):
-    app.run(debug=True)
+    app.run(debug=True, port = 5001)

@@ -4,7 +4,7 @@
 		<title>Cadastro</title>  <!-- -->
 		<meta charset="UTF-8">
 	
-		<link rel="stylesheet" type="text/css" href="static/css/stylecadastro.css">
+		<link rel="stylesheet" type="text/css" href="{{url_for ('static',filename='css/stylecadastro.css')}}">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content ="ie=edge">
@@ -57,37 +57,24 @@
 		</nav>
 
 		</br></br></br>
-		<img src="./static/images/cadastro/CadastrarBackground.jpg" id="FacaOcadastro">
+		<img src="{{url_for('static', filename='images/home/CadastrarBackground.jpg')}}"  id="FacaOcadastro">
 		<div id="BackgroundCadastro">
 		<form id="forum">
 			<br></br></br></br>
 		 <form method="POST">
-    {{form.hidden_tag()}}
-    {{form.mensagem.label}}:  {{form.mensagem}}
-    <br> 
-     
-    {{form.botao}} 
-    </form>  
-		
-		<div class="form-group">
-				<label for="formGroupExampleInput">Nome Completo</label>
-				<input type="text" class="form-control" required="" id="formGroupExampleInput"> 
-		</div>	
-		<div class="form-group">
-				<label for="exampleInputEmail1">Email</label>
-				<input type="email" class="form-control" required="" id="InputexampleInputEmail1" aria-describedby="emailHelp">
-		</div>	
-			<div class="form-group">
-				<label for="exampleInputPassword1">Senha</label>
-				<input type="password" class="form-control" minlength="8" required="" id="exampleInputPassword1">
-			</div>
-				<div class="form-group">
-				<label for="exampleInputPassword1">Confirme Sua Senha</label>
-				<input type="password" class="form-control" minlength="8" required="" id="exampleInputPassword1"> </br>
-		</div>
-			<button type="submit" class="btn btn-primary">Cadastrar-se</button> </br> </br>
-			<div class="dropdown-divider"></div>
-		</form>	
+    {{formulario.hidden_tag()}}
+    {{formulario.name.label}}:  {{formulario.name}}
+	{{formulario.hidden_tag()}}
+    {{formulario.email.label}}:  {{formulario.email}}
+	{{formulario.hidden_tag()}}
+    {{formulario.senha.label}}:  {{formulario.senha}}
+	{{formulario.hidden_tag()}}
+    {{formulario.confirm.label}}:  {{formulario.confirm}}
+	</br>
+	<button class ="btn-large waves-effect waves-dark" style="width:100%" type="submit" onclick="return validar()">Cadastrar</button>
+    <br>  
+</form>  
+
 		</div>
 	</body>
 </html>

@@ -2,7 +2,7 @@
 	<head>
 	
 		<title></title>
-		  <link rel="stylesheet" type="text/css" href="static/css/stylecontato.css">
+		  <link rel="stylesheet" type="text/css" href="{{url_for ('static', filename='css/stylecontato.css')}}">
 		  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	</head>
 	
@@ -46,7 +46,7 @@
 			</form>
 			</div>
 			</nav>
-			<img src="static/images/contato/BackgroundContato.jpg" id="Contato">
+			<img src="{{url_for ('static',filename='static/images/contato/BackgroundContato.jpg')}}" id="Contato"> <img src="{{url_for ('static',filename='images/home/CARD3.png')}}" style="margin-top: -430px; margin-left: 650px; width: 50%;">
 		  <form id="forum">
 		<br></br></br>
 		
